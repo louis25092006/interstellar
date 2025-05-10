@@ -1,0 +1,146 @@
+
+*{  box-sizing: border-box;}
+body { margin: 0 ;
+font-family: "Raleway", sans-serif} 
+
+ul {margin: 0 ;
+  list-style-type: none;}
+
+a {text-decoration: none;
+color: inherit ;}
+
+.header {
+  background-image: url("https://i.pinimg.com/736x/36/65/6e/36656e1fabeb3f61c484794490c65abf.jpg");
+  padding: 15px;
+  height: 3000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;}
+
+ .header::after {
+    content: "";
+    background: #141719;
+    position: absolute;
+    opacity: .50;
+    top: 0;
+    left: 0;
+    height: 3000px;
+    width: 100%;
+    transition: all .25s ease;}
+  
+  .nav { 
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;}
+
+.logo-link {display: flex;
+  height: 100%;
+  align-items: center;}
+
+.logo-img{ width: 100px; 
+  height: 40px; 
+  border-radius: 40%; 
+  object-fit: cover; }      
+/* логотип зверху */
+
+.nav-list {
+align-items: center;
+display: flex;}
+
+.nav-list li { 
+padding: 0 10px;
+color: white; 
+font-weight: bold; 
+font-size: 14px;}
+/* текст навігації */
+
+.nav-list li:last-of-type{ padding-right: 0;}
+.nav-list-link {position:relative; transition: all .25s ease }
+
+ .nav-list-link::after{content: "";
+  background-color: #000000;    /* колір анім.лінії під текстом */
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transform: scaleX(0);
+  transition: all .25s ease;}
+       
+.nav-list-link:hover { color:#85847f}    /* колір анімації тексту */
+.nav-list-link:hover::after {transform: scaleX(1)} 
+
+ .nav-list li:last-of-type a {
+    font-size: 12px;
+    display: flex;   
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 8px;
+    transition: all .25s ease;} 
+   
+ .heart  {margin-right: 5px ;}
+ 
+ .nav-list li:last-of-type a:hover { background-color: #c9233a;; }                    
+ /* анімація черв.кнопки */
+.nav-list li:last-of-type a svg { width: 1em;  }
+
+/* from here */
+.nav-toggle {font-size: 2rem;
+  color: #fff;
+  display: none;}
+
+.burger-icon{
+  display: inline-block;
+  font-size: 2rem;
+  height: 1em;
+  vertical-align: -.125em;
+  cursor: pointer;}
+
+ .main-content {
+  position: relative;
+  z-index: 1;}
+
+ .header-content-title {
+  background: linear-gradient(to right,white 0%, white 45%, black 55%, black 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 84px;
+  font-size: 106px; 
+  padding-top: 100px;}
+
+ .pid-title { 
+  margin-top: -80px;
+   font-size: 40px;
+  color: #1e1c1c;}
+
+  .link-more {
+    background: #000000;
+    color: #ffffff;
+    font-size: .875rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 100%;
+    min-height: 40px;
+    transition: all .25s ease;
+    border-radius: 8px;
+    z-index: 1;}
+ 
+    .link-more:hover { 
+      background-color: #777c74;}
+
+ @media screen and (max-width: 992px) {
+.nav-list { display: none;} .nav-toggle { display: block;} }  
+  
